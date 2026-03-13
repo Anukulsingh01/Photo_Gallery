@@ -1,16 +1,90 @@
-# React + Vite
+# Photo Gallery Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Photo Gallery Web Application** built using React, Vite, and Tailwind CSS.
+The application fetches photos from the Picsum Photos API, displays them in a responsive grid layout, allows users to search photos by author name, and mark photos as favourites.
 
-Currently, two official plugins are available:
+Favourited photos are stored in localStorage so they remain saved even after refreshing the page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Fetches **30 photos** from the Picsum Photos API on page load
+* Displays photos in a **responsive grid**
+* **Real-time search filter** by author name
+* **Favourite toggle** using heart icon
+* Favourites persist using **localStorage**
+* Handles **loading and error states**
+* Uses **React performance hooks (useCallback & useMemo)**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+* React
+* Vite
+* Tailwind CSS
+* JavaScript
+
+---
+
+## API Used
+
+Picsum Photos API
+
+https://picsum.photos/v2/list?limit=30
+
+---
+
+## Project Setup
+
+Clone the repository
+
+git clone https://github.com/your-username/photo-gallery-app.git
+
+Go to project directory
+
+cd photo-gallery-app
+
+Install dependencies
+
+npm install
+
+Run the development server
+
+npm run dev
+
+---
+
+## Project Structure
+
+src/
+│
+├── components/
+│   └── Gallery.jsx
+│
+├── hooks/
+│   └── useFetchPhotos.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+
+---
+
+## Key Concepts Used
+
+* **Custom Hook** (`useFetchPhotos`) to separate data fetching logic from UI
+* **useReducer** to manage favourites state
+* **localStorage** to persist favourites across refresh
+* **useCallback** to memoize the search handler
+* **useMemo** to optimize filtering of photos
+* **Responsive Grid Layout** using Tailwind CSS
+
+---
+
+## Author
+
+Anukul Singh Bisht
+
+Frontend Developer | React Enthusiast
